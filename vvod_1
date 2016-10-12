@@ -1,0 +1,27 @@
+                                  вложенные структуры
+
+struct Data
+{
+  int Value;
+  struct Data* DataItem;
+}
+
+_____
+|int|
+|___|                        ____
+| * | = new struct data[1]; |int|
+|___|                       |___|       _____
+| * |                       | * |------>|int|
+|___|<----                  |___|       |___|
+         |<-----------------| * |       | * |
+                            |___|<--    |___|
+                                   |<---| * |
+                                        |___|
+                                        
+struct data* cursor = data.DataItem;
+while(true)
+{
+  cout << cursor->Value;
+  cout << (*cursor).Value;
+  cursor = cursor-> DataItem;
+}
