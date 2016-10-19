@@ -1,0 +1,32 @@
+                    (предпроцесор)
+
+дерективы начинаются с #
+
+#pragma once
+
+#define ABC 1
+#efaine NO_WARNINGS
+
+# ifdef NO_WARNINGS
+#   ifdef ABC
+
+#   ifdef OS_WIN
+#define PATH_SEPARATOR    "\\"
+#   elif OS_MAc
+#define PATH_SEPARATOR     /
+#   endif // NO_WARNINGS
+
+
+#ifndef MATH_HFILE_GUARD
+#define MATH_HFILE_GUARD
+struct point
+{
+  int X;
+  int Y;
+}
+#endif //MATH_HFILE_GUARD
+
+
+#pragma message("hello" __FILE__)
+
+__FILE__ __LINE__ __FUNCTION__
